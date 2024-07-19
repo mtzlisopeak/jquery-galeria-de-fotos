@@ -7,7 +7,6 @@ $(document).ready(() => {
   $("form").on("submit", (e) => {
     e.preventDefault()
     const enderecoNovaImagem = $("#endereco-nova-imagem").val()
-    let novoItem = $("<li style='display:none;'></li>")
 
     $(`<li style='display: none;'>
         <img src="${enderecoNovaImagem}" alt="">
@@ -15,10 +14,8 @@ $(document).ready(() => {
           <a href="${enderecoNovaImagem}" target="_blank">Ver imagem em tamanho real</a>
         </div>
       </li>`).appendTo("ul").fadeIn()
-    //$(novoItem).fadeIn(1000)
-    //$(novoItem).appendTo("ul")
-    $("#endereco-nova-imagem").val("")
 
+    $("#endereco-nova-imagem").val("")
   })
 
 })
